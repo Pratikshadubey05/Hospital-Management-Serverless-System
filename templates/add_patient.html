@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Add Patient</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Name"><br><br>
+    <input type="number" name="age" placeholder="Age"><br><br>
+
+    <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select><br><br>
+
+    <input type="text" name="phone" placeholder="Phone"><br><br>
+    <textarea name="address" placeholder="Address"></textarea><br><br>
+
+    <button type="submit">Save Patient</button>
+</form>
+
+{% endblock %}
